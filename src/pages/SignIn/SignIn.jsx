@@ -2,13 +2,22 @@ import { faEyeSlash, faEye } from '@fortawesome/free-solid-svg-icons';
 import './SignIn.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const SignIn = () => {
+const SignIn = ({ setAuthenticate }) => {
   const [passwordCheck, setPasswordCheck] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleSignIn = (event) => {
+    event.preventDefault();
+    setAuthenticate(true);
+    navigate('/');
+  };
 
   return (
     <div>
-      <form className='sign-in'>
+      <form className='sign-in' onSubmit={handleSignIn}>
         <div className='sign-in__header'>
           <h2>로그인</h2>
           <p className='sign-in__message'>다양한 할인 혜택과 이벤트, 보너스 쿠폰을 놓치지 마세요</p>
