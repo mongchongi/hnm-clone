@@ -21,3 +21,15 @@
 .product__new {
   min-height: 19.5px;
 }
+
+@media screen and (max-width: 1200px) {
+  .product {
+    width: calc((100% - (3 - 1) * 15px) / 3);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product {
+    width: 100%;
+  }
+}

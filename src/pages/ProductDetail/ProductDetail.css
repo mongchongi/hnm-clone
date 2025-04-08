@@ -77,3 +77,32 @@
   background: #bc2725;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .detail {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .detail__image {
+    width: 100%;
+  }
+
+  .detail__info {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .detail__title {
+    font-size: 18px;
+  }
+
+  .detail__price {
+    font-size: 16px;
+  }
+
+  .detail__size-list {
+    top: -98px;
+    border-top: 1px solid black;
+  }
+}

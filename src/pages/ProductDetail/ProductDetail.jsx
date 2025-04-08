@@ -39,11 +39,9 @@ const ProductDetail = () => {
     getCurrentProduct();
   }, []);
 
-  console.log(currentProduct.size);
-
   return (
     <div className='detail'>
-      <img src={currentProduct.img} alt={currentProduct.title} className='detail__image' />
+      <img src={currentProduct.img} alt={currentProduct.title} draggable='false' className='detail__image' />
       <div className='detail__info'>
         <div className='detail__title'>{currentProduct.title}</div>
         <div className='detail__price'>￦{currentProduct.price}</div>

@@ -4,4 +4,11 @@
   flex-wrap: wrap;
   gap: 15px;
   margin: 0 auto 20px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px), screen and (max-width: 1200px) {
+  .product-list {
+    width: 100%;
+  }
 }
