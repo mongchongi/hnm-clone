@@ -26,6 +26,14 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
     window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
   };
 
+  const handleSearch = (event) => {
+    const keyword = event.target.value;
+
+    if (event.key === 'Enter') {
+      navigate(`/?q=${keyword}`);
+    }
+  };
+
   useEffect(() => {
     window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
     window.addEventListener('resize', handleResize);
@@ -75,7 +83,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
           )}
           <div className='nav__search'>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
-            <input type='text' placeholder='제품 검색' className='nav__search-input' />
+            <input type='text' placeholder='제품 검색' className='nav__search-input' onKeyDown={handleSearch} />
           </div>
         </div>
       </div>
