@@ -5,12 +5,12 @@
   width: 35px;
   height: 35px;
   border: none;
-  background: rgba(188, 39, 37, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
 .top-button:active {
-  background: rgba(188, 39, 37, 0.6);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .top-button__icon {
