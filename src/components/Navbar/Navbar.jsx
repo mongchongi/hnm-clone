@@ -2,16 +2,21 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faMagnifyingGlass, faXmark } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import hnmLogo from '../../assets/hnm-logo.png';
 import { useEffect, useState } from 'react';
 
-const Navbar = () => {
-  const [width, setWidth] = useState(0);
+const Navbar = ({ authenticate, setAuthenticate }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  const navigate = useNavigate();
+
   const menuList = ['여성', 'Divided', '남성', '신생아/유아', '아동', 'H&M Home', 'Sale', '지속가능성'];
+
+  const handleMoveSignInPage = () => {
+    authenticate ? setAuthenticate(false) : navigate('/sign-in');
+  };
 
   const handleToggleMenu = () => {
     setShowMenu((prev) => !prev);
@@ -47,10 +52,10 @@ const Navbar = () => {
         </div>
       )}
       <div className='nav'>
-        <Link to={'/sign-in'} className='nav__sign-in'>
+        <div className='nav__sign-in' onClick={handleMoveSignInPage}>
           <FontAwesomeIcon icon={faUser} />
-          <div>로그인</div>
-        </Link>
+          <div>{authenticate ? '로그아웃' : '로그인'}</div>
+        </div>
         <div className='nav__logo'>
           <Link to={'/'}>
             <img src={hnmLogo} alt='H&M' draggable='false' className='nav__logo-image' />

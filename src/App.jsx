@@ -11,9 +11,9 @@ const App = () => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
-        <Route path='/' element={<ProductAll authenticate={authenticate} />} />
+        <Route path='/' element={<ProductAll />} />
         <Route path='/product/:id' element={<PrivateRoute authenticate={authenticate} />} />
         <Route path='/sign-in' element={<SignIn setAuthenticate={setAuthenticate} />} />
       </Routes>
