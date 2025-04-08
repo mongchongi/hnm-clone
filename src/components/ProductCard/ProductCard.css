@@ -5,6 +5,7 @@
   gap: 3px;
   background: white;
   transition: all 0.5s;
+  cursor: pointer;
 }
 
 .product:hover {

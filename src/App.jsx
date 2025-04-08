@@ -1,24 +1,20 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import ProductAll from './pages/ProductAll/ProductAll';
-import ProductDetail from './pages/ProductDetail';
 import SignIn from './pages/SignIn/SignIn';
 import Navbar from './components/Navbar/Navbar';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import PrivateRoute from './route/PrivateRoute';
 
 const App = () => {
   const [authenticate, setAuthenticate] = useState(false); // true => 로그인 O, false => 로그인 X
-
-  useEffect(() => {
-    console.log(authenticate);
-  }, [authenticate]);
 
   return (
     <div>
       <Navbar />
       <Routes>
-        <Route path='/' element={<ProductAll />} />
-        <Route path='/product/:id' element={<ProductDetail />} />
+        <Route path='/' element={<ProductAll authenticate={authenticate} />} />
+        <Route path='/product/:id' element={<PrivateRoute authenticate={authenticate} />} />
         <Route path='/sign-in' element={<SignIn setAuthenticate={setAuthenticate} />} />
       </Routes>
     </div>
