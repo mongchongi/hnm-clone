@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import './ProductAll.css';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import { useSearchParams } from 'react-router-dom';
+import Loading from '../../components/Loading/Loading';
+import Error from '../../components/Error/Error';
 
 const ProductAll = () => {
   const [products, setProducts] = useState([]);
@@ -31,11 +33,16 @@ const ProductAll = () => {
 
   return (
     <div>
-      <div className='product-list'>
-        {products.map((item) => (
-          <ProductCard key={item.id} product={item} />
-        ))}
-      </div>
+      {isLoading && <Loading isLoading={isLoading} />}
+      {error ? (
+        <Error />
+      ) : (
+        <div className='product-list'>
+          {products.map((item) => (
+            <ProductCard key={item.id} product={item} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
