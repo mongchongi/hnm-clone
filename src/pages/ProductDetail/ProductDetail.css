@@ -1,0 +1,79 @@
+.detail {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.detail__image {
+  width: 28%;
+  display: block;
+}
+
+.detail__info {
+  min-width: 250px;
+}
+
+.detail__title {
+  font-size: 24px;
+}
+
+.detail__price {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.detail__choice,
+.detail__new {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.detail__select {
+  position: relative;
+  margin-top: 15px;
+}
+
+.detail__select-button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border: 1px solid black;
+  background: transparent;
+  cursor: pointer;
+}
+
+.detail__size-list {
+  background: white;
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  border: 1px solid black;
+  border-top: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.detail__size-item {
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.detail__size-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.detail__add-button {
+  width: 100%;
+  margin-top: 15px;
+  height: 40px;
+  color: white;
+  border: none;
+  background: #bc2725;
+  cursor: pointer;
+}
