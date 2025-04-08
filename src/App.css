@@ -1,0 +1,18 @@
+.top-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: rgba(188, 39, 37, 0.3);
+  cursor: pointer;
+}
+
+.top-button:active {
+  background: rgba(188, 39, 37, 0.6);
+}
+
+.top-button__icon {
+  color: white;
+}
