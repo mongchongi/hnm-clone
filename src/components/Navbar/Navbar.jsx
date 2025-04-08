@@ -10,12 +10,10 @@ const Navbar = () => {
 
   return (
     <div className='nav'>
-      <div className='nav__sign-in'>
+      <Link to={'/sign-in'} className='nav__sign-in'>
         <FontAwesomeIcon icon={faUser} />
-        <Link to={'/sign-in'} className='nav__sign-in-link'>
-          로그인
-        </Link>
-      </div>
+        <div>로그인</div>
+      </Link>
       <div className='nav__logo'>
         <Link to={'/'}>
           <img src={hnmLogo} alt='H&M' className='nav__logo-image' />
