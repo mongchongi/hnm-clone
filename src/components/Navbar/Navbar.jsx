@@ -16,7 +16,7 @@ const Navbar = () => {
       </Link>
       <div className='nav__logo'>
         <Link to={'/'}>
-          <img src={hnmLogo} alt='H&M' className='nav__logo-image' />
+          <img src={hnmLogo} alt='H&M' draggable='false' className='nav__logo-image' />
         </Link>
       </div>
       <div className='nav__controls'>
