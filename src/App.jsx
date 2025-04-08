@@ -3,10 +3,12 @@ import './App.css';
 import ProductAll from './pages/ProductAll';
 import ProductDetail from './pages/ProductDetail';
 import SignIn from './pages/SignIn';
+import Navbar from './components/Navbar/Navbar';
 
 const App = () => {
   return (
     <div>
+      <Navbar />
       <Routes>
         <Route path='/' element={<ProductAll />} />
         <Route path='/product/:id' element={<ProductDetail />} />

@@ -1,0 +1,59 @@
+.nav {
+  padding: 10px 10px 0;
+}
+
+.nav__sign-in {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 5px;
+}
+
+.nav__sign-in-link {
+  color: black;
+  text-decoration: none;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__logo-image {
+  width: 100px;
+  display: block;
+}
+
+.nav__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.nav__menu-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav__menu-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav__search {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  position: absolute;
+  right: 0;
+  border-bottom: 1px solid black;
+  padding: 3px;
+}
+
+.nav__search-input {
+  border: none;
+  outline: none;
+}
