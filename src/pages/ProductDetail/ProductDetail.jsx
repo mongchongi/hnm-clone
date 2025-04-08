@@ -17,7 +17,7 @@ const ProductDetail = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch(`http://localhost:4000/products/${id}`);
+      const res = await fetch(`https://my-json-server.typicode.com/mongchongi/hnm-clone/products/${id}`);
       const data = await res.json();
       setCurrentProduct(data);
     } catch (error) {

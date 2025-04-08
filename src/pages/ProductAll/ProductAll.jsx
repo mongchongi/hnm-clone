@@ -14,7 +14,7 @@ const ProductAll = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch(`http://localhost:4000/products?q=${searchQuery}`);
+      const res = await fetch(`https://my-json-server.typicode.com/mongchongi/hnm-clone/products?q=${searchQuery}`);
       const data = await res.json();
       setProducts(data);
     } catch (error) {
