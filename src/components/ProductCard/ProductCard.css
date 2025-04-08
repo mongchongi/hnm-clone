@@ -26,10 +26,18 @@
   .product {
     width: calc((100% - (3 - 1) * 15px) / 3);
   }
+
+  .product:hover {
+    transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 768px) {
   .product {
     width: 100%;
+  }
+
+  .product:hover {
+    transform: scale(1);
   }
 }
